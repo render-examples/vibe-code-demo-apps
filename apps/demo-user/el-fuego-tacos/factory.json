@@ -1,0 +1,24 @@
+{
+  "user": "demo-user",
+  "appName": "el-fuego-tacos",
+  "prompt": "Create a website for selling tacos. make it just a static site",
+  "summary": "A single static brochure/menu site for a taco stand called El Fuego Tacos. The prompt explicitly asks for 'just a static site' selling tacos, and there's no requirement for user accounts, orders that persist, or server-side logic — the menu, prices, and story are fixed content that can ship as plain HTML/CSS/JS. That means a static_site is the entire footprint: no web_service (nothing needs to run per-request), no postgres (no data needs to outlive a request), and no key_value (nothing to cache or queue).",
+  "createdAt": "2026-09-09T16:55:16.951Z",
+  "resourcePrefix": "vibe",
+  "tiers": [
+    "static_site"
+  ],
+  "manifest": {
+    "services": [
+      {
+        "name": "el-fuego-tacos",
+        "kind": "static_site",
+        "rootDir": ".",
+        "runtime": "static",
+        "buildCommand": "true",
+        "staticPublishPath": "."
+      }
+    ]
+  },
+  "notes": []
+}
