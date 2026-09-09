@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Masa Fuego — Fire-charred tacos, made to order</title>
+<meta name="description" content="Masa Fuego is a taco food truck slinging fire-charred, made-to-order tacos. Find today's spot, check the menu, and follow along on Instagram." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌮</text></svg>">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="brand">🔥 Masa Fuego</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#location">Today's Spot</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="hero">
+  <div class="hero-bg" style="background-image:url('assets/street-tacos-plate.jpg')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-kicker">Sonoma County's hardest-working step-van</p>
+    <h1>Masa Fuego</h1>
+    <p class="hero-tagline">Fire-charred tacos, made to order.</p>
+    <a href="#location" class="btn btn-primary">See Today's Spot</a>
+  </div>
+  <div class="hero-scroll-cue">↓</div>
+</header>
+
+<section class="strip" id="hours">
+  <div class="strip-inner">
+    <div class="strip-item"><span class="strip-label">Mon – Fri</span><span>11am – 9pm (per schedule)</span></div>
+    <div class="strip-item"><span class="strip-label">Saturday</span><span>By event — check Instagram</span></div>
+    <div class="strip-item"><span class="strip-label">Sunday</span><span>Closed, prepping masa</span></div>
+  </div>
+</section>
+
+<section class="section" id="menu">
+  <div class="container">
+    <h2 class="section-title">The Menu</h2>
+    <p class="section-sub">Six tacos. Zero shortcuts. Todo hecho a mano.</p>
+
+    <div class="menu-feature">
+      <img src="assets/grilled-carne-asada.jpg" alt="Sizzling strips of grilled carne asada beef with charred edges on a hot surface" />
+      <div class="menu-feature-caption">Straight off the flat-top, every single order.</div>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-card">
+        <h3>Carne Asada Taco</h3>
+        <p>Grilled skirt steak, onion, cilantro, salsa roja.</p>
+        <span class="price">$4.25</span>
+      </div>
+      <div class="menu-card">
+        <h3>Al Pastor Taco</h3>
+        <p>Spit-roasted pork, pineapple, onion.</p>
+        <span class="price">$4.25</span>
+      </div>
+      <div class="menu-card">
+        <h3>Pollo Verde Taco</h3>
+        <p>Achiote chicken, tomatillo salsa, queso fresco.</p>
+        <span class="price">$4.00</span>
+      </div>
+      <div class="menu-card">
+        <h3>Baja Fish Taco</h3>
+        <p>Beer-battered cod, cabbage slaw, chipotle crema.</p>
+        <span class="price">$4.75</span>
+      </div>
+      <div class="menu-card">
+        <h3>Vegetariano Taco</h3>
+        <p>Roasted mushroom &amp; poblano, black beans, avocado crema.</p>
+        <span class="price">$4.00</span>
+      </div>
+      <div class="menu-card">
+        <h3>Elote Callejero <em>(side)</em></h3>
+        <p>Grilled corn, cotija, lime, chile powder.</p>
+        <span class="price">$5.00</span>
+      </div>
+    </div>
+
+    <div class="combo-card">
+      <div class="combo-text">
+        <h3>The Fuego Three</h3>
+        <p>Any 3 tacos + a horchata. Built for the hungry, priced for the people.</p>
+      </div>
+      <span class="price price-lg">$14</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="location">
+  <div class="container">
+    <h2 class="section-title">Today's Spot</h2>
+    <p class="section-sub">We move around. Here's where to catch the masa magic this week.</p>
+    <div class="schedule">
+      <div class="schedule-row"><span class="day">Mon</span><span class="place">Riverside Business Park</span><span class="time">11am – 2pm</span></div>
+      <div class="schedule-row"><span class="day">Tue</span><span class="place">Oak Street Brewery</span><span class="time">5pm – 9pm</span></div>
+      <div class="schedule-row"><span class="day">Wed</span><span class="place">Riverside Business Park</span><span class="time">11am – 2pm</span></div>
+      <div class="schedule-row"><span class="day">Thu</span><span class="place">Downtown Farmers Market</span><span class="time">4pm – 8pm</span></div>
+      <div class="schedule-row"><span class="day">Fri</span><span class="place">Oak Street Brewery</span><span class="time">5pm – 10pm</span></div>
+      <div class="schedule-row"><span class="day">Sat</span><span class="place">Lakeside Park <em>(special events — check Instagram)</em></span><span class="time">Varies</span></div>
+      <div class="schedule-row schedule-closed"><span class="day">Sun</span><span class="place">Closed — prepping masa for the week</span><span class="time">—</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-text">
+      <h2 class="section-title">Our Story</h2>
+      <p>We started Masa Fuego out of a beat-up '98 step-van with one griddle and a family salsa recipe.</p>
+      <p>Every tortilla is pressed fresh, every meat hits the flat-top to order — no steam trays, no shortcuts.</p>
+      <p class="about-signoff">Todo con amor. 🔥</p>
+    </div>
+    <div class="about-images">
+      <img src="assets/food-truck-exterior.jpg" alt="A bright food truck with signage and service window ready to serve customers" />
+      <img src="assets/fresh-corn-tortillas.jpg" alt="Stack of freshly made corn tortillas, warm and pliable" />
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <h2 class="section-title">Find Us / Follow Us</h2>
+    <p class="section-sub">No app. No loyalty card. Just a text and a truck.</p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Call or Text</h3>
+        <p>For catering &amp; call-ahead orders:</p>
+        <a class="contact-link" href="tel:+15552138890">(555) 213-8890</a>
+      </div>
+      <div class="contact-card">
+        <h3>Instagram</h3>
+        <p>Daily location drops &amp; new specials:</p>
+        <a class="contact-link" href="https://instagram.com/masafuegotacos" target="_blank" rel="noopener">@masafuegotacos</a>
+      </div>
+      <div class="contact-card">
+        <h3>Get the Route</h3>
+        <p>Weekly schedule straight to your inbox:</p>
+        <form class="signup-form" action="mailto:hello@masafuegotacos.com" method="post" enctype="text/plain">
+          <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address" />
+          <button type="submit" class="btn btn-secondary">Sign Me Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">🌮 Masa Fuego</div>
+    <div class="footer-socials">
+      <a href="https://instagram.com/masafuegotacos" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></svg>
+      </a>
+      <a href="tel:+15552138890" aria-label="Call">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 4c0 9 7 16 16 16l2-4-5-2-2 2c-3-1.5-5.5-4-7-7l2-2-2-5-4 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <p class="footer-copy">© 2026 Masa Fuego Food Truck. Fire-charred, fresh-pressed, always on the move.</p>
+    <p class="footer-credits">Photos: ProtoplasmaKid / Wikimedia Commons (CC BY-SA 4.0) · TeresaCastanedo / Wikimedia Commons (CC BY-SA 4.0) · Missvain / Wikimedia Commons (CC BY 4.0) · NASA / Wikimedia Commons (Public domain)</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

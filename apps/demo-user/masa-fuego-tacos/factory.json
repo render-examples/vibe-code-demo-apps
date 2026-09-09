@@ -1,0 +1,24 @@
+{
+  "user": "demo-user",
+  "appName": "masa-fuego-tacos",
+  "prompt": "Create a website landing page for a taco food truck",
+  "summary": "A single-page brochure site for \"Masa Fuego,\" a taco food truck. The prompt asks only for a landing page — there's no user data, orders, or accounts to persist, and nothing needs to run server-side per request. A static site fully serves this: it shows the menu, hours, live location, and a call-to-action to follow on social/text for the daily spot. No web_service, postgres, or key_value is justified since there's no dynamic data lookup, no form processing that requires a backend, and nothing that outlives a single page load.",
+  "createdAt": "2026-09-09T18:10:31.355Z",
+  "resourcePrefix": "vibe",
+  "tiers": [
+    "static_site"
+  ],
+  "manifest": {
+    "services": [
+      {
+        "name": "masa-fuego-tacos",
+        "kind": "static_site",
+        "rootDir": ".",
+        "runtime": "static",
+        "buildCommand": "true",
+        "staticPublishPath": "."
+      }
+    ]
+  },
+  "notes": []
+}
