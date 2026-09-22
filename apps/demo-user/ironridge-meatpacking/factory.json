@@ -1,0 +1,25 @@
+{
+  "user": "demo-user",
+  "appName": "ironridge-meatpacking",
+  "prompt": "Create a website for a meat packing plant",
+  "summary": "A brochure-style website for Ironridge Meat Packing Co., a wholesale meat processing plant. The site presents the company's history, USDA certifications, product line (beef, pork, poultry cuts), wholesale ordering info, and contact/location details. Since all content is static company information and a read-only product catalog with no per-request logic, transactions, or data that changes after deployment, a single static_site is sufficient — filtering of the product catalog can be done client-side in the browser.",
+  "createdAt": "2026-09-22T20:18:27.064Z",
+  "resourcePrefix": "vibe",
+  "tiers": [
+    "static_site"
+  ],
+  "manifest": {
+    "services": [
+      {
+        "name": "ironridge-meatpacking-site",
+        "kind": "static_site",
+        "rootDir": ".",
+        "runtime": "static",
+        "buildCommand": "mkdir -p dist && cp index.html about.html products.html wholesale.html quality.html contact.html styles.css common.js products.js dist/ && cp -r assets dist/ && cp -r specs dist/",
+        "staticPublishPath": "dist"
+      }
+    ],
+    "databases": []
+  },
+  "notes": []
+}
