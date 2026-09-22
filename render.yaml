@@ -2,7 +2,7 @@
 #
 # One Blueprint holds every app the factory has built. A run appends its
 # app's resources here, and Render's Blueprint sync deploys them.
-# Apps: 11
+# Apps: 12
 
 services:
   # ── clumsy-plum-skunk/gpu-price-tracker ────────────────────
@@ -27,6 +27,17 @@ services:
     buildFilter:
       paths:
         - apps/demo-user/el-fuego-tacos/**
+  # ── demo-user/ironvale-meats ────────────────────
+  - type: web
+    name: vibe-demo-user-ironvale-meats-web
+    runtime: static
+    rootDir: apps/demo-user/ironvale-meats
+    buildCommand: echo 'no build required — static HTML/CSS/JS'
+    staticPublishPath: .
+    autoDeployTrigger: commit
+    buildFilter:
+      paths:
+        - apps/demo-user/ironvale-meats/**
   # ── demo-user/masa-fuego-tacos ────────────────────
   - type: web
     name: vibe-demo-user-masa-fuego-tacos-web

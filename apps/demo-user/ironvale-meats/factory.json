@@ -1,0 +1,25 @@
+{
+  "user": "demo-user",
+  "appName": "ironvale-meats",
+  "prompt": "Create a basic website for a meat-packing plant",
+  "summary": "A brochure-style website for Ironvale Meats, a family-run meat-packing plant. The prompt asks for a \"basic website,\" so the plan is a single static site: no user data needs to persist between visits and nothing needs to run per-request, so a web service and database would be unjustified overhead. The site covers who the plant is, what cuts/products it packs, its safety and USDA-inspection credentials, and how wholesale buyers or retail customers can get in touch.",
+  "createdAt": "2026-09-22T16:59:56.153Z",
+  "resourcePrefix": "vibe",
+  "tiers": [
+    "static_site"
+  ],
+  "manifest": {
+    "services": [
+      {
+        "name": "ironvale-meats-site",
+        "kind": "static_site",
+        "rootDir": ".",
+        "runtime": "static",
+        "buildCommand": "echo 'no build required — static HTML/CSS/JS'",
+        "staticPublishPath": "."
+      }
+    ],
+    "databases": []
+  },
+  "notes": []
+}
