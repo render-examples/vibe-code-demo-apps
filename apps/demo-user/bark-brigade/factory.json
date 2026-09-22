@@ -1,0 +1,24 @@
+{
+  "user": "demo-user",
+  "appName": "bark-brigade",
+  "prompt": "create a website for a volunteer firefighter program for dogs.",
+  "summary": "A brochure-style website for 'Bark Brigade,' a whimsical volunteer firefighter program for dogs. The site introduces the program, showcases dog 'recruits' and their ranks/badges, explains how to volunteer a dog, and shares training milestones. Since all content is fixed at launch (program info, dog roster, FAQs) and there's no need for persistent user-submitted data, accounts, or transactions, a single static_site is the smallest primitive that fully serves this prompt.",
+  "createdAt": "2026-09-22T21:24:44.170Z",
+  "resourcePrefix": "vibe",
+  "tiers": [
+    "static_site"
+  ],
+  "manifest": {
+    "services": [
+      {
+        "name": "bark-brigade-site",
+        "kind": "static_site",
+        "rootDir": ".",
+        "runtime": "static",
+        "buildCommand": "mkdir -p dist && cp index.html styles.css script.js recruits.js dist/ && cp -r assets dist/",
+        "staticPublishPath": "dist"
+      }
+    ]
+  },
+  "notes": []
+}

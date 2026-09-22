@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bark Brigade Volunteer K9 Fire Corps</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#home" class="brand">🐾 Bark Brigade</a>
+    <nav class="main-nav">
+      <a href="#home">Home</a>
+      <a href="#recruits">Meet the Recruits</a>
+      <a href="#how">How It Works</a>
+      <a href="#ranks">Ranks &amp; Badges</a>
+      <a href="#signup">Volunteer Sign-Up</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="wrap hero-inner">
+    <h1>Good Dogs. <span>Great Rescues.</span></h1>
+    <p class="tagline">Bark Brigade Volunteer K9 Fire Corps — pairing brave, tail-waggingly good dogs with real community fire-safety events.</p>
+    <a href="#signup" class="btn btn-primary">🚒 Enlist Your Dog</a>
+  </div>
+  <div class="hero-photo">
+    <img src="assets/fire-truck-dog.jpg" alt="A dog sitting with a fire truck in the background">
+    <span class="credit">Photo: U.S. Army photo by Elena Baladelli / Wikimedia Commons (Public domain)</span>
+  </div>
+</section>
+
+<section id="recruits" class="section">
+  <div class="wrap">
+    <h2>Meet the Recruits</h2>
+    <p class="section-sub">Every good boy (and girl) deserves a badge. Search or filter our roster of on-duty volunteers below.</p>
+
+    <div class="filters">
+      <input type="text" id="search" placeholder="Search by name or breed…">
+      <select id="rankFilter">
+        <option value="">All Ranks</option>
+        <option value="Cadet">Cadet</option>
+        <option value="Junior Responder">Junior Responder</option>
+        <option value="Full Firefighter">Full Firefighter</option>
+        <option value="Chief">Chief</option>
+      </select>
+    </div>
+
+    <div id="recruitGrid" class="recruit-grid"></div>
+    <p id="noResults" class="no-results" hidden>No recruits match that search. Try another breed or rank!</p>
+  </div>
+</section>
+
+<section id="how" class="section alt">
+  <div class="wrap">
+    <h2>How It Works</h2>
+    <p class="section-sub">From first sniff to first bandana — here's the path every recruit walks (or trots).</p>
+    <ol class="timeline">
+      <li>
+        <span class="step-num">1</span>
+        <div><h3>Fill Out the Enlistment Form</h3><p>Tell us about your good dog — name, breed, and their bravest moment so far.</p></div>
+      </li>
+      <li>
+        <span class="step-num">2</span>
+        <div><h3>Attend Puppy Bootcamp Orientation</h3><p>A fun, low-key meetup where new recruits learn the ropes (and the hoses).</p></div>
+      </li>
+      <li>
+        <span class="step-num">3</span>
+        <div><h3>Earn Your First Bandana</h3><p>Official Cadet status! Red bandana included, tail-wags mandatory.</p></div>
+      </li>
+      <li>
+        <span class="step-num">4</span>
+        <div><h3>Join Real Community Events</h3><p>March, sniff, and greet at local fire-safety walks and neighborhood events.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="ranks" class="section">
+  <div class="wrap">
+    <h2>Training &amp; Ranks</h2>
+    <p class="section-sub">Every recruit rises through the ranks with time, training, and treats.</p>
+    <div class="rank-chart">
+      <div class="rank-card">
+        <div class="badge badge-cadet">🎽</div>
+        <h3>Cadet</h3>
+        <p class="rank-req">In training</p>
+        <p>Wears a red bandana and is still mastering the art of sitting still during roll call.</p>
+      </div>
+      <div class="rank-card">
+        <div class="badge badge-junior">🥉</div>
+        <h3>Junior Responder</h3>
+        <p class="rank-req">1 year of service</p>
+        <p>Earns a small badge and can be trusted near the hose reel (mostly).</p>
+      </div>
+      <div class="rank-card">
+        <div class="badge badge-full">🥈</div>
+        <h3>Full Firefighter</h3>
+        <p class="rank-req">3+ years of service</p>
+        <p>Full badge and helmet. Sniffs out smoke like it's a squeaky toy.</p>
+      </div>
+      <div class="rank-card">
+        <div class="badge badge-chief">🥇</div>
+        <h3>Chief</h3>
+        <p class="rank-req">5+ years of service</p>
+        <p>Gold badge, leads the pack, and gets the best spot by the fire truck.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="signup" class="section alt signup-section">
+  <div class="wrap signup-inner">
+    <div class="signup-text">
+      <h2>Ready to Enlist?</h2>
+      <p class="section-sub">Every good boy deserves a badge — and yours could be next. Signing up is free, paw-some, and takes two minutes.</p>
+      <ul class="signup-list">
+        <li>✅ All breeds and sizes welcome</li>
+        <li>✅ No fees — donations always appreciated</li>
+        <li>✅ Real community fire-safety events</li>
+      </ul>
+    </div>
+    <div class="signup-card">
+      <h3>Enlistment Request</h3>
+      <form class="mailto-form" onsubmit="return false;">
+        <label>Dog's Name<input type="text" placeholder="e.g. Sparky"></label>
+        <label>Breed<input type="text" placeholder="e.g. Beagle"></label>
+        <label>Why should they join?<textarea rows="3" placeholder="Bravest moment, biggest bark, best trick…"></textarea></label>
+        <a class="btn btn-primary" href="mailto:woof@barkbrigade.example?subject=New%20Recruit%20Enlistment&body=Dog's%20Name%3A%0ABreed%3A%0AWhy%20they%20should%20join%3A">
+          📬 Send Enlistment Email
+        </a>
+      </form>
+      <p class="hint">This opens your email app addressed to <a href="mailto:woof@barkbrigade.example">woof@barkbrigade.example</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section">
+  <div class="wrap">
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-trigger">Is this a real fire department? <span>+</span></button>
+        <div class="accordion-panel"><p>No — Bark Brigade is a volunteer community program pairing dogs and owners with local fire-safety awareness events. We don't fight fires; we fight complacency about smoke detectors, one wagging tail at a time.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">Can any dog join? <span>+</span></button>
+        <div class="accordion-panel"><p>Yes! All breeds and sizes welcome — from Chihuahuas to Great Danes. If they've got a heart for helping (and can handle a bandana), they're in.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">Is there a fee? <span>+</span></button>
+        <div class="accordion-panel"><p>No, membership is completely free. Donations are welcome and help fund bandanas, badges, and the occasional celebratory treat.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="motto">"Every good boy deserves a badge." 🐾</p>
+    <div class="footer-contact">
+      <a href="mailto:woof@barkbrigade.example">✉️ woof@barkbrigade.example</a>
+      <span>@BarkBrigadeK9</span>
+      <span>Bark Brigade Volunteer K9 Fire Corps</span>
+    </div>
+  </div>
+</footer>
+
+<script src="recruits.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
