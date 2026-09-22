@@ -1,0 +1,264 @@
+:root {
+  --moss: #3f4f3d;
+  --bark: #2c2a26;
+  --cream: #f6f2ea;
+  --sand: #e8e0d1;
+  --clay: #a3745a;
+  --line: rgba(44,42,38,0.15);
+  font-size: 18px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--cream);
+  color: var(--bark);
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  line-height: 1.7;
+}
+
+a { color: var(--moss); }
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+header.site {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+header.site .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.brand {
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--bark);
+  font-weight: 600;
+}
+
+nav.main a {
+  color: var(--bark);
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+nav.main a:hover, nav.main a.active {
+  color: var(--clay);
+  border-bottom: 1px solid var(--clay);
+}
+
+.hero {
+  position: relative;
+  padding: 90px 0 70px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(63,79,61,0.08), rgba(246,242,234,0)), var(--sand);
+  overflow: hidden;
+}
+
+.hero-photo {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.9);
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  margin: 0.4em 0 0.2em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.hero p.sub {
+  font-size: 1.15rem;
+  color: var(--moss);
+  margin: 0 0 1.4em;
+}
+
+.credit {
+  font-size: 0.72rem;
+  color: rgba(44,42,38,0.55);
+  text-align: right;
+  margin: 4px 0 0;
+}
+
+main {
+  padding: 60px 0 90px;
+}
+
+section + section {
+  margin-top: 64px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 0.6em;
+  color: var(--moss);
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.3em;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid var(--line);
+}
+
+.timeline li {
+  padding: 4px 0 26px 24px;
+  position: relative;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--clay);
+}
+
+.timeline time {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--moss);
+  letter-spacing: 0.03em;
+  margin-bottom: 2px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 620px) {
+  .cards { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 26px;
+}
+
+.card .price {
+  font-size: 1.8rem;
+  color: var(--clay);
+  margin: 6px 0 14px;
+}
+
+.card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.card ul li { margin-bottom: 6px; }
+
+.btn {
+  display: inline-block;
+  background: var(--moss);
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 30px;
+  border-radius: 4px;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  margin-top: 10px;
+}
+
+.btn:hover { background: var(--bark); }
+
+.map-placeholder {
+  border: 1px dashed var(--line);
+  border-radius: 6px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--moss);
+  background:
+    repeating-linear-gradient(45deg, rgba(63,79,61,0.05), rgba(63,79,61,0.05) 10px, rgba(63,79,61,0.09) 10px, rgba(63,79,61,0.09) 20px);
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 20px;
+}
+
+.photo {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+  object-fit: cover;
+}
+
+blockquote {
+  border-left: 3px solid var(--clay);
+  margin: 0 0 22px;
+  padding-left: 20px;
+  font-style: italic;
+  color: var(--bark);
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 8px;
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--moss);
+}
+
+.bio {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.bio img {
+  width: 180px;
+  border-radius: 6px;
+}
+
+.bio-text { flex: 1; min-width: 240px; }
+
+dl.faq dt {
+  font-weight: 600;
+  margin-top: 22px;
+}
+
+dl.faq dd {
+  margin: 6px 0 0;
+  color: var(--bark);
+}
+
+footer.site {
+  border-top: 1px solid var(--line);
+  padding: 30px 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--moss);
+}
