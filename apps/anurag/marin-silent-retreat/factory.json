@@ -1,0 +1,24 @@
+{
+  "user": "anurag",
+  "appName": "marin-silent-retreat",
+  "prompt": "Create a website for a silent yoga retreat in Marin for December 2, 2026.",
+  "summary": "A one-day silent yoga retreat in Marin County on December 2, 2026 needs a simple, calm landing page presenting the schedule, location, pricing, and a registration call-to-action. Since there's no need for accounts, persistent user data, or server-side logic (registration can link out to email or an external form/payment link), a single static site fully serves this brief with no backend or database required.",
+  "createdAt": "2026-09-22T23:22:22.518Z",
+  "resourcePrefix": "vibe",
+  "tiers": [
+    "static_site"
+  ],
+  "manifest": {
+    "services": [
+      {
+        "name": "marin-silent-retreat",
+        "kind": "static_site",
+        "rootDir": ".",
+        "runtime": "static",
+        "buildCommand": "mkdir -p dist && cp *.html style.css dist/ && cp -r assets dist/",
+        "staticPublishPath": "dist"
+      }
+    ]
+  },
+  "notes": []
+}

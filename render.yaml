@@ -2,9 +2,20 @@
 #
 # One Blueprint holds every app the factory has built. A run appends its
 # app's resources here, and Render's Blueprint sync deploys them.
-# Apps: 15
+# Apps: 16
 
 services:
+  # ── anurag/marin-silent-retreat ────────────────────
+  - type: web
+    name: vibe-anurag-marin-silent-retreat-web
+    runtime: static
+    rootDir: apps/anurag/marin-silent-retreat
+    buildCommand: mkdir -p dist && cp *.html style.css dist/ && cp -r assets dist/
+    staticPublishPath: dist
+    autoDeployTrigger: commit
+    buildFilter:
+      paths:
+        - apps/anurag/marin-silent-retreat/**
   # ── clumsy-plum-skunk/gpu-price-tracker ────────────────────
   - type: web
     name: airo-clumsy-plum--gpu-price-tracker-web
