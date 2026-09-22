@@ -1,3 +1,3 @@
-# airo-apps
+# vibe-code-demo-apps
 
-Generated apps from the Airo factory.
+Generated apps from the vibe-code-demo factory.
