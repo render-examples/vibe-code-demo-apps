@@ -1,0 +1,20 @@
+{
+  "user": "demo-user",
+  "appName": "gloomy-tails",
+  "prompt": "create a website for depressed dogs to get help from specialists",
+  "summary": "A whimsical static website for 'depressed dogs' seeking help from canine mental health specialists. This is a lighthearted directory/brochure site listing specialists, their bios, and approaches, plus a light-up-your-day resource section. Since all content (specialist profiles, articles, contact info) is fixed and doesn't require accounts, transactions, or data that changes post-deploy, a single static_site is sufficient — no backend or database needed.",
+  "createdAt": "2026-09-24T16:15:47.902Z",
+  "resourcePrefix": "vibe",
+  "manifest": {
+    "services": [
+      {
+        "name": "gloomy-tails-wellness",
+        "kind": "static_site",
+        "rootDir": ".",
+        "runtime": "static",
+        "buildCommand": "rm -rf dist && mkdir -p dist && cp -r index.html specialists.html symptoms.html success-stories.html resources.html contact.html css js assets dist/",
+        "staticPublishPath": "dist"
+      }
+    ]
+  }
+}

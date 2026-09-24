@@ -3,7 +3,7 @@
 # One Blueprint holds every app the factory has built, each in its own
 # project. A run appends its app here, and Render's Blueprint sync
 # deploys it.
-# Apps: 17
+# Apps: 9
 
 projects:
   # ── anurag/marin-silent-retreat ────────────────────
@@ -14,13 +14,13 @@ projects:
           - type: web
             name: vibe-anurag-marin-silent-retreat-web
             runtime: static
-            rootDir: apps/anurag/marin-silent-retreat
-            buildCommand: mkdir -p dist && cp *.html style.css dist/ && cp -r assets dist/
-            staticPublishPath: dist
+            rootDir: "apps/anurag/marin-silent-retreat"
+            buildCommand: "mkdir -p dist && cp *.html style.css dist/ && cp -r assets dist/"
+            staticPublishPath: "dist"
             autoDeployTrigger: commit
             buildFilter:
               paths:
-                - apps/anurag/marin-silent-retreat/**
+                - "apps/anurag/marin-silent-retreat/**"
   # ── anurag/peninsula-interiors ────────────────────
   - name: vibe-anurag-peninsula-interiors
     environments:
@@ -29,28 +29,13 @@ projects:
           - type: web
             name: vibe-anurag-peninsula-interiors-web
             runtime: static
-            rootDir: apps/anurag/peninsula-interiors
-            buildCommand: mkdir -p dist && cp index.html styles.css script.js dist/ && cp -r assets dist/assets
-            staticPublishPath: dist
+            rootDir: "apps/anurag/peninsula-interiors"
+            buildCommand: "mkdir -p dist && cp index.html styles.css script.js dist/ && cp -r assets dist/assets"
+            staticPublishPath: "dist"
             autoDeployTrigger: commit
             buildFilter:
               paths:
-                - apps/anurag/peninsula-interiors/**
-  # ── clumsy-plum-skunk/gpu-price-tracker ────────────────────
-  - name: airo-clumsy-plum--gpu-price-tracker
-    environments:
-      - name: production
-        services:
-          - type: web
-            name: airo-clumsy-plum--gpu-price-tracker-web
-            runtime: static
-            rootDir: apps/clumsy-plum-skunk/gpu-price-tracker
-            buildCommand: true
-            staticPublishPath: .
-            autoDeployTrigger: commit
-            buildFilter:
-              paths:
-                - apps/clumsy-plum-skunk/gpu-price-tracker/**
+                - "apps/anurag/peninsula-interiors/**"
   # ── demo-user/bark-brigade ────────────────────
   - name: vibe-demo-user-bark-brigade
     environments:
@@ -59,13 +44,13 @@ projects:
           - type: web
             name: vibe-demo-user-bark-brigade-web
             runtime: static
-            rootDir: apps/demo-user/bark-brigade
-            buildCommand: mkdir -p dist && cp index.html styles.css script.js recruits.js dist/ && cp -r assets dist/
-            staticPublishPath: dist
+            rootDir: "apps/demo-user/bark-brigade"
+            buildCommand: "mkdir -p dist && cp index.html styles.css script.js recruits.js dist/ && cp -r assets dist/"
+            staticPublishPath: "dist"
             autoDeployTrigger: commit
             buildFilter:
               paths:
-                - apps/demo-user/bark-brigade/**
+                - "apps/demo-user/bark-brigade/**"
   # ── demo-user/el-fuego-tacos ────────────────────
   - name: vibe-demo-user-el-fuego-tacos
     environments:
@@ -74,13 +59,28 @@ projects:
           - type: web
             name: vibe-demo-user-el-fuego-tacos-web
             runtime: static
-            rootDir: apps/demo-user/el-fuego-tacos
-            buildCommand: true
-            staticPublishPath: .
+            rootDir: "apps/demo-user/el-fuego-tacos"
+            buildCommand: "true"
+            staticPublishPath: "."
             autoDeployTrigger: commit
             buildFilter:
               paths:
-                - apps/demo-user/el-fuego-tacos/**
+                - "apps/demo-user/el-fuego-tacos/**"
+  # ── demo-user/gloomy-tails ────────────────────
+  - name: vibe-demo-user-gloomy-tails
+    environments:
+      - name: production
+        services:
+          - type: web
+            name: vibe-demo-user-gloomy-tails-web
+            runtime: static
+            rootDir: "apps/demo-user/gloomy-tails"
+            buildCommand: "rm -rf dist && mkdir -p dist && cp -r index.html specialists.html symptoms.html success-stories.html resources.html contact.html css js assets dist/"
+            staticPublishPath: "dist"
+            autoDeployTrigger: commit
+            buildFilter:
+              paths:
+                - "apps/demo-user/gloomy-tails/**"
   # ── demo-user/ironridge-meatpacking ────────────────────
   - name: vibe-demo-user-ironridge-meatpacking
     environments:
@@ -89,13 +89,13 @@ projects:
           - type: web
             name: vibe-demo-user-ironridge-meatpacking-web
             runtime: static
-            rootDir: apps/demo-user/ironridge-meatpacking
-            buildCommand: mkdir -p dist && cp index.html about.html products.html wholesale.html quality.html contact.html styles.css common.js products.js dist/ && cp -r assets dist/ && cp -r specs dist/
-            staticPublishPath: dist
+            rootDir: "apps/demo-user/ironridge-meatpacking"
+            buildCommand: "mkdir -p dist && cp index.html about.html products.html wholesale.html quality.html contact.html styles.css common.js products.js dist/ && cp -r assets dist/ && cp -r specs dist/"
+            staticPublishPath: "dist"
             autoDeployTrigger: commit
             buildFilter:
               paths:
-                - apps/demo-user/ironridge-meatpacking/**
+                - "apps/demo-user/ironridge-meatpacking/**"
   # ── demo-user/ironvale-meats ────────────────────
   - name: vibe-demo-user-ironvale-meats
     environments:
@@ -104,13 +104,13 @@ projects:
           - type: web
             name: vibe-demo-user-ironvale-meats-web
             runtime: static
-            rootDir: apps/demo-user/ironvale-meats
-            buildCommand: echo 'no build required — static HTML/CSS/JS'
-            staticPublishPath: .
+            rootDir: "apps/demo-user/ironvale-meats"
+            buildCommand: "echo 'no build required — static HTML/CSS/JS'"
+            staticPublishPath: "."
             autoDeployTrigger: commit
             buildFilter:
               paths:
-                - apps/demo-user/ironvale-meats/**
+                - "apps/demo-user/ironvale-meats/**"
   # ── demo-user/masa-fuego-tacos ────────────────────
   - name: vibe-demo-user-masa-fuego-tacos
     environments:
@@ -119,13 +119,13 @@ projects:
           - type: web
             name: vibe-demo-user-masa-fuego-tacos-web
             runtime: static
-            rootDir: apps/demo-user/masa-fuego-tacos
-            buildCommand: true
-            staticPublishPath: .
+            rootDir: "apps/demo-user/masa-fuego-tacos"
+            buildCommand: "true"
+            staticPublishPath: "."
             autoDeployTrigger: commit
             buildFilter:
               paths:
-                - apps/demo-user/masa-fuego-tacos/**
+                - "apps/demo-user/masa-fuego-tacos/**"
   # ── demo-user/mendocino-silent-yoga ────────────────────
   - name: vibe-demo-user-mendocino-silent-yoga
     environments:
@@ -134,130 +134,10 @@ projects:
           - type: web
             name: vibe-demo-user-mendocino-silent-yoga-web
             runtime: static
-            rootDir: apps/demo-user/mendocino-silent-yoga
-            buildCommand: mkdir -p dist && cp *.html style.css dist/ && cp -r assets dist/
-            staticPublishPath: dist
+            rootDir: "apps/demo-user/mendocino-silent-yoga"
+            buildCommand: "mkdir -p dist && cp *.html style.css dist/ && cp -r assets dist/"
+            staticPublishPath: "dist"
             autoDeployTrigger: commit
             buildFilter:
               paths:
-                - apps/demo-user/mendocino-silent-yoga/**
-  # ── demo/gopher-gallery ────────────────────
-  - name: airo-demo-gopher-gallery
-    environments:
-      - name: production
-        services:
-          - type: web
-            name: airo-demo-gopher-gallery-web
-            runtime: static
-            rootDir: apps/demo/gopher-gallery
-            buildCommand: echo 'no build needed'
-            staticPublishPath: .
-            autoDeployTrigger: commit
-            buildFilter:
-              paths:
-                - apps/demo/gopher-gallery/**
-  # ── demo/happy-paws ────────────────────
-  - name: airo-demo-happy-paws
-    environments:
-      - name: production
-        services:
-          - type: web
-            name: airo-demo-happy-paws-web
-            runtime: static
-            rootDir: apps/demo/happy-paws
-            buildCommand: echo 'Static site — no build step required'
-            staticPublishPath: .
-            autoDeployTrigger: commit
-            buildFilter:
-              paths:
-                - apps/demo/happy-paws/**
-  # ── demo/happy-paws-dog-walking ────────────────────
-  - name: airo-demo-happy-paws-dog-walking
-    environments:
-      - name: production
-        services:
-          - type: web
-            name: airo-demo-happy-paws-dog-walking-web
-            runtime: static
-            rootDir: apps/demo/happy-paws-dog-walking
-            buildCommand: echo "no build needed"
-            staticPublishPath: .
-            autoDeployTrigger: commit
-            buildFilter:
-              paths:
-                - apps/demo/happy-paws-dog-walking/**
-  # ── fluttering-teal-ant/driftwood-surf-swap ────────────────────
-  - name: airo-fluttering-t-driftwood-surf-swap
-    environments:
-      - name: production
-        services:
-          - type: web
-            name: airo-fluttering-t-driftwood-surf-swap-web
-            runtime: static
-            rootDir: apps/fluttering-teal-ant/driftwood-surf-swap
-            buildCommand: true
-            staticPublishPath: .
-            autoDeployTrigger: commit
-            buildFilter:
-              paths:
-                - apps/fluttering-teal-ant/driftwood-surf-swap/**
-  # ── official-emerald-primate/el-fuego-tacos ────────────────────
-  - name: airo-official-eme-el-fuego-tacos
-    environments:
-      - name: production
-        services:
-          - type: web
-            name: airo-official-eme-el-fuego-tacos-web
-            runtime: static
-            rootDir: apps/official-emerald-primate/el-fuego-tacos
-            buildCommand: true
-            staticPublishPath: .
-            autoDeployTrigger: commit
-            buildFilter:
-              paths:
-                - apps/official-emerald-primate/el-fuego-tacos/**
-  # ── relaxed-gray-butterfly/domainpricing ────────────────────
-  - name: airo-relaxed-gray-domainpricing
-    environments:
-      - name: production
-        services:
-          - type: web
-            name: airo-relaxed-gray-domainpricing-web
-            runtime: static
-            rootDir: apps/relaxed-gray-butterfly/domainpricing
-            buildCommand: true
-            staticPublishPath: .
-            autoDeployTrigger: commit
-            buildFilter:
-              paths:
-                - apps/relaxed-gray-butterfly/domainpricing/**
-  # ── scared-salmon-emu/windward-sailboats ────────────────────
-  - name: airo-scared-salmo-windward-sailboats
-    environments:
-      - name: production
-        services:
-          - type: web
-            name: airo-scared-salmo-windward-sailboats-web
-            runtime: static
-            rootDir: apps/scared-salmon-emu/windward-sailboats
-            buildCommand: true
-            staticPublishPath: .
-            autoDeployTrigger: commit
-            buildFilter:
-              paths:
-                - apps/scared-salmon-emu/windward-sailboats/**
-  # ── yeasty-bronze-kiwi/nimbus-hosting ────────────────────
-  - name: airo-yeasty-bronz-nimbus-hosting
-    environments:
-      - name: production
-        services:
-          - type: web
-            name: airo-yeasty-bronz-nimbus-hosting-web
-            runtime: static
-            rootDir: apps/yeasty-bronze-kiwi/nimbus-hosting
-            buildCommand: true
-            staticPublishPath: .
-            autoDeployTrigger: commit
-            buildFilter:
-              paths:
-                - apps/yeasty-bronze-kiwi/nimbus-hosting/**
+                - "apps/demo-user/mendocino-silent-yoga/**"

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact / Book a Consultation — Gloomy Tails Wellness Center</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Book a consultation for your dog and find our clinic hours and contact info.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html">
+    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="36" r="18" fill="#5c4033"/>
+      <ellipse cx="18" cy="20" rx="8" ry="12" fill="#5c4033" transform="rotate(-20 18 20)"/>
+      <ellipse cx="46" cy="20" rx="8" ry="12" fill="#5c4033" transform="rotate(20 46 20)"/>
+      <circle cx="25" cy="33" r="2.5" fill="#fff8f0"/>
+      <circle cx="39" cy="33" r="2.5" fill="#fff8f0"/>
+      <path d="M24 44 Q32 38 40 44" stroke="#fff8f0" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+    Gloomy Tails
+  </a>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="specialists.html">Meet the Specialists</a></li>
+      <li><a href="symptoms.html">Symptoms &amp; Signs</a></li>
+      <li><a href="success-stories.html">Success Stories</a></li>
+      <li><a href="resources.html">Resources &amp; Articles</a></li>
+      <li><a href="contact.html" class="active">Contact / Book</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Book a Consultation</h2>
+    <p>Ready to help your pup rediscover their tail-wagging self? Fill out the form below and we'll get back to you within one business day — usually faster if there's a squirrel involved.</p>
+    <div class="contact-grid">
+      <form class="contact-form" action="mailto:hello@gloomytails.example" method="post" enctype="text/plain">
+        <label for="owner-name">Your Name</label>
+        <input type="text" id="owner-name" name="Owner Name" required placeholder="Jane Doe">
+
+        <label for="dog-name">Dog's Name</label>
+        <input type="text" id="dog-name" name="Dog Name" required placeholder="Biscuit">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required placeholder="jane@example.com">
+
+        <label for="concern">Specialty Needed</label>
+        <select id="concern" name="Specialty">
+          <option>Separation Anxiety</option>
+          <option>Grief &amp; Loss</option>
+          <option>Boredom &amp; Under-Stimulation</option>
+          <option>Diet-Related Lethargy</option>
+          <option>Not Sure Yet</option>
+        </select>
+
+        <label for="message">Tell Us What's Going On</label>
+        <textarea id="message" name="Message" rows="5" placeholder="e.g. He's been hiding under the bed and skipping his walks since we moved..."></textarea>
+
+        <p><button class="btn" type="submit">Send Consultation Request</button></p>
+      </form>
+
+      <div class="info-box">
+        <h3>Clinic Hours</h3>
+        <p>Monday – Saturday: 8:00am – 6:00pm<br>Sunday: Closed (even specialists need belly rubs and rest)</p>
+        <h3>Reach Us Directly</h3>
+        <p>📞 555-DOG-HAPPY<br>✉️ <a href="mailto:hello@gloomytails.example">hello@gloomytails.example</a></p>
+        <h3>A Gentle Reminder</h3>
+        <p>Tails will wag again — sometimes it just takes the right support. We're honored to be part of your dog's journey back to joy.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Gloomy Tails Wellness Center &middot; 555-DOG-HAPPY &middot; hello@gloomytails.example &middot; Mon–Sat 8am–6pm</p>
+  <p class="disclaimer">This is a lighthearted wellness concept. If you have real concerns about your dog's behavior or health, please consult a licensed veterinarian.</p>
+</footer>
+</body>
+</html>

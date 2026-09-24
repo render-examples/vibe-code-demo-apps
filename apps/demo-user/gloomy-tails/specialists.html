@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Meet the Specialists — Gloomy Tails Wellness Center</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Meet our canine mental health specialists — search and filter by expertise.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html">
+    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="36" r="18" fill="#5c4033"/>
+      <ellipse cx="18" cy="20" rx="8" ry="12" fill="#5c4033" transform="rotate(-20 18 20)"/>
+      <ellipse cx="46" cy="20" rx="8" ry="12" fill="#5c4033" transform="rotate(20 46 20)"/>
+      <circle cx="25" cy="33" r="2.5" fill="#fff8f0"/>
+      <circle cx="39" cy="33" r="2.5" fill="#fff8f0"/>
+      <path d="M24 44 Q32 38 40 44" stroke="#fff8f0" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+    Gloomy Tails
+  </a>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="specialists.html" class="active">Meet the Specialists</a></li>
+      <li><a href="symptoms.html">Symptoms &amp; Signs</a></li>
+      <li><a href="success-stories.html">Success Stories</a></li>
+      <li><a href="resources.html">Resources &amp; Articles</a></li>
+      <li><a href="contact.html">Contact / Book</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Meet the Specialists</h2>
+    <p>Our roster of compassionate professionals is ready to help your pup find their pep again. Search by name or browse by specialty below.</p>
+    <div class="filter-bar">
+      <input type="text" id="search-input" placeholder="Search by name, specialty, or keyword...">
+    </div>
+    <div class="filter-bar">
+      <button class="tag-btn active" data-tag="all">All Specialties</button>
+      <button class="tag-btn" data-tag="separation-anxiety">Separation Anxiety</button>
+      <button class="tag-btn" data-tag="grief">Grief</button>
+      <button class="tag-btn" data-tag="boredom">Boredom Blues</button>
+      <button class="tag-btn" data-tag="diet">Diet-Related Lethargy</button>
+    </div>
+    <div class="card-grid" id="specialist-grid"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Gloomy Tails Wellness Center &middot; 555-DOG-HAPPY &middot; hello@gloomytails.example &middot; Mon–Sat 8am–6pm</p>
+  <p class="disclaimer">This is a lighthearted wellness concept. If you have real concerns about your dog's behavior or health, please consult a licensed veterinarian.</p>
+</footer>
+
+<script src="js/specialists.js"></script>
+<script src="js/directory.js"></script>
+</body>
+</html>
