@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn — Patch Tips & Guides — Synthwave Collective</title>
+<meta name="description" content="Step-by-step sound design recipes for classic analog bass, west coast synthesis, and lush pads.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="logo">SYNTHWAVE COLLECTIVE</div>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="learn.html" class="active">Learn</a>
+    <a href="events.html">Events</a>
+    <a href="about.html">Community</a>
+  </nav>
+</header>
+
+<main>
+  <section class="section">
+    <h2 class="section-title">Patch Tips & Guides</h2>
+    <p>Grab your favorite mono synth (or your DAW's soft-synth of choice) and follow along. We explain the jargon as we go, so newcomers won't get lost in acronym soup.</p>
+
+    <article class="article-card">
+      <h3>Building a Classic Analog Bass Patch</h3>
+      <p>That fat, growling bass on every Minimoog record isn't magic — it's a formula. Here's the recipe:</p>
+      <ol>
+        <li><strong>Oscillators:</strong> Stack two VCOs (voltage-controlled oscillators). Set one to a sawtooth wave, detune the second slightly (5–10 cents) for thickness.</li>
+        <li><strong>Sub oscillator:</strong> If your synth has one, add it an octave down for low-end weight.</li>
+        <li><strong>Filter:</strong> Route into a low-pass filter (that ladder filter warmth is the secret sauce). Cutoff around 30–40%, resonance at 20–30%.</li>
+        <li><strong>Filter envelope:</strong> Fast attack, medium decay, low sustain, short release — a quick "pluck" that opens the filter on note-on and settles fast.</li>
+        <li><strong>Amp envelope:</strong> Fast attack, no sustain dip, medium release so notes don't click off.</li>
+        <li><strong>Glide:</strong> Add a touch of portamento for that classic sliding bass line feel between notes.</li>
+      </ol>
+      <p>Play it an octave lower than feels natural — analog bass patches almost always sit lower in the mix than you expect.</p>
+    </article>
+
+    <article class="article-card">
+      <h3>West Coast Synthesis 101: FM Meets Wavefolding</h3>
+      <p>"West coast" synthesis (named for the Bay Area lineage of Don Buchla's designs) skips the standard subtractive filter approach in favor of FM and wavefolding for harmonic complexity.</p>
+      <ol>
+        <li><strong>Start with a sine wave</strong> oscillator instead of a sawtooth — west coast patches build complexity additively rather than carving it away with filters.</li>
+        <li><strong>FM (frequency modulation):</strong> Use a second oscillator to modulate the pitch of the first at audio rate. Small amounts add metallic edge; large amounts create bell tones and noise-like textures.</li>
+        <li><strong>Wavefolder:</strong> Route your sine through a wavefolder to fold the waveform back on itself, generating rich odd harmonics without any filter at all.</li>
+        <li><strong>Envelope the fold amount:</strong> Modulate the wavefolder's fold depth with an envelope for a "blooming" harmonic swell on each note.</li>
+        <li><strong>Low-pass gate:</strong> If your instrument has one (a hallmark of Buchla-style design), use it instead of a standard VCA + filter combo — it shapes both amplitude and tone together, like a mute on a plucked string.</li>
+      </ol>
+      <p>The Make Noise 0-Coast is purpose-built for exactly this kind of patching — start there if you want to try it hands-on.</p>
+    </article>
+
+    <article class="article-card">
+      <h3>Getting Lush Pads from Any Poly Synth</h3>
+      <p>Pads are about space and movement, not precision. Here's how to get that Juno-106-style wash on nearly any polyphonic synth:</p>
+      <ol>
+        <li><strong>Detune two or three oscillators</strong> against each other slightly — this beating between close pitches is what creates motion.</li>
+        <li><strong>Slow attack, slow release</strong> on your amp envelope — think 1–3 seconds on each so notes fade in and out instead of snapping.</li>
+        <li><strong>Filter it dark:</strong> Low-pass filter cutoff around 40%, with a slow LFO gently sweeping it up and down for evolving brightness.</li>
+        <li><strong>Chorus or ensemble effect:</strong> If your synth has built-in chorus (the Juno-106's is legendary), turn it on. If not, add one after — it thickens multiple voices into one lush wash.</li>
+        <li><strong>Reverb, generously:</strong> Pads live in the reverb tail. A long hall or plate reverb glues everything together.</li>
+      </ol>
+      <p>Play slow-moving chords and let the patch do the work — pads are about patience, not performance.</p>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 Synthwave Collective — made with love, coffee, and a slightly detuned VCO.
+</footer>
+</body>
+</html>

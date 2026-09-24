@@ -1,0 +1,20 @@
+{
+  "user": "demo-user",
+  "appName": "synthwave-collective",
+  "prompt": "Create a website for synth enthusiasts",
+  "summary": "A static brochure/community site for synth enthusiasts covering vintage and modern synthesizers, a browsable gear catalog, patch tips, and event listings. Everything is read-only reference content (no accounts, orders, or server-side data changes), so a single static site fully serves the prompt with in-browser filtering for the gear catalog.",
+  "createdAt": "2026-09-24T16:47:26.295Z",
+  "resourcePrefix": "vibe",
+  "manifest": {
+    "services": [
+      {
+        "name": "synthwave-collective",
+        "kind": "static_site",
+        "rootDir": ".",
+        "runtime": "static",
+        "buildCommand": "mkdir -p dist && cp -r src/*.html src/*.css src/*.js dist/ && cp -r assets dist/assets",
+        "staticPublishPath": "dist"
+      }
+    ]
+  }
+}

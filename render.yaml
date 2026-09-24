@@ -3,7 +3,7 @@
 # One Blueprint holds every app the factory has built, each in its own
 # project. A run appends its app here, and Render's Blueprint sync
 # deploys it.
-# Apps: 9
+# Apps: 10
 
 projects:
   # ── anurag/marin-silent-retreat ────────────────────
@@ -141,3 +141,18 @@ projects:
             buildFilter:
               paths:
                 - "apps/demo-user/mendocino-silent-yoga/**"
+  # ── demo-user/synthwave-collective ────────────────────
+  - name: vibe-demo-user-synthwave-collective
+    environments:
+      - name: production
+        services:
+          - type: web
+            name: vibe-demo-user-synthwave-collective-web
+            runtime: static
+            rootDir: "apps/demo-user/synthwave-collective"
+            buildCommand: "mkdir -p dist && cp -r src/*.html src/*.css src/*.js dist/ && cp -r assets dist/assets"
+            staticPublishPath: "dist"
+            autoDeployTrigger: commit
+            buildFilter:
+              paths:
+                - "apps/demo-user/synthwave-collective/**"

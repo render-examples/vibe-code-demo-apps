@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gear Catalog — Synthwave Collective</title>
+<meta name="description" content="Browse and filter vintage and modern synthesizers by brand, type, and era.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="logo">SYNTHWAVE COLLECTIVE</div>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="catalog.html" class="active">Catalog</a>
+    <a href="learn.html">Learn</a>
+    <a href="events.html">Events</a>
+    <a href="about.html">Community</a>
+  </nav>
+</header>
+
+<main>
+  <section class="section">
+    <h2 class="section-title">Gear Catalog</h2>
+    <p>Ten machines that shaped modern electronic music — from 1970s analog monsters to today's hybrid workstations. Filter by brand, type, or era, or just search for a name.</p>
+
+    <div class="filters">
+      <input type="text" id="search" placeholder="Search synths…">
+      <select id="brand-filter"></select>
+      <select id="type-filter">
+        <option value="">All types</option>
+        <option value="analog">Analog</option>
+        <option value="digital">Digital</option>
+        <option value="modular">Modular</option>
+      </select>
+      <select id="era-filter"></select>
+    </div>
+
+    <div class="grid-3" id="catalog-grid"></div>
+    <p id="catalog-empty">No synths match those filters — try widening your search.</p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Gallery</h2>
+    <div class="grid-3">
+      <div class="card">
+        <img src="assets/analog-synthesizer.jpg" alt="Analog synthesizer with rows of sliders and knobs">
+        <p class="credit">Photo: Brandon Daniel from USA / Wikimedia Commons (CC BY-SA 2.0)</p>
+      </div>
+      <div class="card">
+        <img src="assets/modular-synthesizer-patch-cables.jpg" alt="Modular synthesizer patched with cables">
+        <p class="credit">Photo: IPEM studio synthesizer (ca.1960-1980) - MIM Brussels (2015-05-30 07.36.09 by chibicode).jpg: chibicode derivative work: / Wikimedia Commons (CC BY-SA 3.0)</p>
+      </div>
+      <div class="card">
+        <img src="assets/vintage-synthesizer-keyboard.jpg" alt="Vintage synthesizer keyboard">
+        <p class="credit">Photo: Pete Brown from Gambrills, MD, USA / Wikimedia Commons (CC BY 2.0)</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 Synthwave Collective — made with love, coffee, and a slightly detuned VCO.
+</footer>
+<script src="catalog.js"></script>
+</body>
+</html>
