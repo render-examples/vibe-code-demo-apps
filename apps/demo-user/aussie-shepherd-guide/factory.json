@@ -1,0 +1,20 @@
+{
+  "user": "demo-user",
+  "appName": "aussie-shepherd-guide",
+  "prompt": "Create a website that includes information on Australian Shepherds.",
+  "summary": "A static informational website about Australian Shepherds covering breed history, temperament, appearance, coat colors, exercise and grooming needs, health, and training tips. Since this is read-only editorial content with no user accounts, transactions, or data that changes after deployment, a single static_site is the smallest sufficient primitive — all content and any filtering (e.g., by coat color) can be handled client-side in the browser.",
+  "createdAt": "2026-09-24T23:11:48.018Z",
+  "resourcePrefix": "vibe",
+  "manifest": {
+    "services": [
+      {
+        "name": "aussie-shepherd-guide",
+        "kind": "static_site",
+        "rootDir": ".",
+        "runtime": "static",
+        "buildCommand": "rm -rf dist && mkdir -p dist && cp *.html styles.css script.js dist/ && cp -r assets dist/assets",
+        "staticPublishPath": "dist"
+      }
+    ]
+  }
+}

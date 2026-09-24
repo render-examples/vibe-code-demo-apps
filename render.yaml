@@ -3,7 +3,7 @@
 # One Blueprint holds every app the factory has built, each in its own
 # project. A run appends its app here, and Render's Blueprint sync
 # deploys it.
-# Apps: 10
+# Apps: 11
 
 projects:
   # ── anurag/marin-silent-retreat ────────────────────
@@ -36,6 +36,21 @@ projects:
             buildFilter:
               paths:
                 - "apps/anurag/peninsula-interiors/**"
+  # ── demo-user/aussie-shepherd-guide ────────────────────
+  - name: vibe-demo-user-aussie-shepherd-guide
+    environments:
+      - name: production
+        services:
+          - type: web
+            name: vibe-demo-user-aussie-shepherd-guide-web
+            runtime: static
+            rootDir: "apps/demo-user/aussie-shepherd-guide"
+            buildCommand: "rm -rf dist && mkdir -p dist && cp *.html styles.css script.js dist/ && cp -r assets dist/assets"
+            staticPublishPath: "dist"
+            autoDeployTrigger: commit
+            buildFilter:
+              paths:
+                - "apps/demo-user/aussie-shepherd-guide/**"
   # ── demo-user/bark-brigade ────────────────────
   - name: vibe-demo-user-bark-brigade
     environments:

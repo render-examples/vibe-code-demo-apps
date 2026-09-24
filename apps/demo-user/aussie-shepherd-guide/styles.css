@@ -1,0 +1,244 @@
+:root {
+  --blue: #2f4a5c;
+  --rust: #b5562f;
+  --cream: #f6efe4;
+  --ink: #26302f;
+  --merle-blue: #6f8ea6;
+  --merle-red: #a45a44;
+  font-size: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+header.site-header {
+  background: linear-gradient(120deg, var(--blue), #1c2f3a);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+header.site-header .brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+nav.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.3rem 0.1rem;
+  border-bottom: 2px solid transparent;
+}
+
+nav.main-nav a:hover, nav.main-nav a.active {
+  border-bottom: 2px solid var(--rust);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.2rem;
+  color: var(--blue);
+}
+
+.tagline {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--rust);
+  margin-top: 0;
+}
+
+.sidebar {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  color: var(--blue);
+  font-size: 1.1rem;
+}
+
+.sidebar dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem 1rem;
+  margin: 0;
+}
+
+.sidebar dt { font-weight: 700; color: var(--rust); }
+.sidebar dd { margin: 0; }
+
+.cta-box {
+  background: linear-gradient(120deg, var(--rust), #8a3f21);
+  color: white;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+section.content-block {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+section.content-block h2 {
+  color: var(--blue);
+  margin-top: 0;
+}
+
+section.content-block h3 {
+  color: var(--rust);
+}
+
+.filter-bar {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.filter-bar button {
+  background: white;
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.filter-bar button.active, .filter-bar button:hover {
+  background: var(--blue);
+  color: white;
+}
+
+.coat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.coat-card {
+  background: var(--cream);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e0d5c2;
+}
+
+.coat-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.coat-card .body {
+  padding: 1rem;
+}
+
+.coat-card h3 {
+  margin-top: 0;
+}
+
+.swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.swatch.blue-merle { background: linear-gradient(135deg, var(--merle-blue), #dbe4ea 40%, #33475a); }
+.swatch.red-merle { background: linear-gradient(135deg, var(--merle-red), #f0d6c8 40%, #7a2f1f); }
+.swatch.black-tri { background: linear-gradient(135deg, #1a1a1a, #b5562f 60%, #f6efe4); }
+.swatch.red-tri { background: linear-gradient(135deg, #8a3f21, #b5562f 60%, #f6efe4); }
+
+#faq-search {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--blue);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e0d5c2;
+  padding: 1rem 0;
+}
+
+.faq-item h3 {
+  margin: 0 0 0.4rem 0;
+  color: var(--blue);
+}
+
+.faq-item.hidden { display: none; }
+
+.credit {
+  font-size: 0.75rem;
+  color: #6c7573;
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #6c7573;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; }
+}
